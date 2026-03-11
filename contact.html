@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | DRS Interiors</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">DRS Interiors</div>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Mobile menu icon -->
+  <div class="menu-toggle">☰</div>
+</header>
+
+<!-- CONTACT HERO -->
+<section class="contact-hero reveal">
+  <div class="contact-overlay"></div>
+
+  <div class="contact-hero-content reveal delay-1">
+    <h1>Let’s Create Something Beautiful</h1>
+    <p>
+      Every space has a story.  
+      Let’s design yours with comfort, elegance, and purpose.
+    </p>
+  </div>
+</section>
+
+  <!-- INFORMATION FORM -->
+ <<section class="contact-section">
+  <div class="contact-card">
+
+    <!-- LEFT : FORM -->
+    <div class="contact-form">
+      <h2>Let’s design your space</h2>
+      <p>
+        From concept to completion, we create interiors that are elegant,
+        functional, and built to last.
+      </p>
+
+      <div class="form-row">
+        <input type="text" placeholder="First name">
+        <input type="text" placeholder="Last name">
+      </div>
+
+      <input type="email" placeholder="Email address">
+      <input type="tel" placeholder="Phone number">
+      <textarea placeholder="Tell us about your project"></textarea>
+
+      <a 
+  href="https://wa.me/916383960771?text=Hi%20DRS%20Interiors,%20I%20would%20like%20a%20free%20consultation"
+  target="_blank"
+  class="btn whatsapp-main-btn"
+>
+  Book Free Consultation
+</a>
+    </div>
+
+    <!-- RIGHT : IMAGE + WHATSAPP -->
+    <div class="contact-visual">
+      <img src="assets/contact-image.jpg" alt="DRS Interiors">
+
+      <!-- WhatsApp button BELOW image -->
+      <a
+        href="https://wa.me/919999999999"
+        target="_blank"
+        class="whatsapp-inline"
+      >
+        Chat on WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  reveals.forEach(el => observer.observe(el));
+</script>
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

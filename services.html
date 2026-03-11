@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | DRS Interiors</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">DRS Interiors</div>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Mobile menu icon -->
+  <div class="menu-toggle">☰</div>
+</header>
+
+
+
+<!-- SERVICES HERO -->
+<section class="services-hero">
+  <div class="services-hero-overlay"></div>
+  <div class="services-hero-content">
+    <h1>Our Services</h1>
+    <p>Interior solutions designed for comfort, style & durability</p>
+    <a href="#service-list" class="btn glow-btn">Explore Services</a>
+  </div>
+</section>
+<!-- ===== FLOORING SHOWCASE SECTION ===== -->
+<section class="flooring-showcase reveal">
+
+  <div class="flooring-images">
+    <img src="assets/services/floor1.jpg" class="img img-1 reveal delay-1" />
+    <img src="assets/services/floor2.jpg" class="img img-2 reveal delay-2" />
+    <img src="assets/services/floor3.jpg" class="img img-3 reveal delay-3" />
+  </div>
+
+  <div class="flooring-content reveal delay-2">
+    <div class="pill-group">
+      <span class="pill">Vinyl flooring</span>
+      <span class="pill">Wooden flooring</span>
+      <span class="pill">PVC flooring</span>
+      <span class="pill">Commercial-grade</span>
+    </div>
+
+    <p class="small-title">
+      DRS Interiors – Interior & Space Solutions
+    </p>
+
+    <h2>
+      Transform your space with our wide range of stylish and functional flooring.
+    </h2>
+
+    <p class="desc">
+      At DRS Interiors, we offer end-to-end interior and furnishing solutions
+      that enhance both aesthetics and functionality.
+    </p>
+  </div>
+
+</section>
+
+
+<!-- SERVICES LIST -->
+<section class="services-page" id="service-list">
+
+  <div class="service-box">
+    <h3>Curtains & Blinds</h3>
+    <p>Custom-made curtains and blinds that enhance privacy, comfort and elegance.</p>
+    <a href="#" class="service-btn">View Details</a>
+  </div>
+
+  <div class="service-box dark">
+    <h3>Flooring Solutions</h3>
+    <p>Premium vinyl, wooden, PVC and commercial-grade flooring solutions.</p>
+    <a href="#" class="service-btn">View Details</a>
+  </div>
+
+  <div class="service-box">
+    <h3>Mosquito Nets</h3>
+    <p>Durable and custom-fit mosquito nets for windows and doors.</p>
+    <a href="#" class="service-btn">View Details</a>
+  </div>
+
+  <div class="service-box dark">
+    <h3>PVC & uPVC Wardrobes</h3>
+    <p>Modern, low-maintenance wardrobes built for long-lasting use.</p>
+    <a href="#" class="service-btn">View Details</a>
+  </div>
+
+  <div class="service-box">
+    <h3>False Ceiling</h3>
+    <p>Stylish false ceiling designs that elevate your interior ambience.</p>
+    <a href="#" class="service-btn">View Details</a>
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-card">
+    <h2>Ready to Transform Your Space?</h2>
+    <p>
+      From design to installation, we deliver premium interior solutions
+      with quality craftsmanship and trusted materials.
+    </p>
+    <a href="#" class="btn glow-btn">Book Free Consultation</a>
+  </div>
+</section>
+<!-- ===== PVC / INTERIOR SOLUTIONS SECTION ===== -->
+<section class="interior-stack reveal">
+
+  <h2 class="section-title reveal delay-1">
+    PVC & UPVC Solutions
+  </h2>
+
+  <div class="stack-images">
+    <img src="./assets/services/stack1.jpg" class="reveal delay-1">
+    <img src="./assets/services/stack2.jpg" class="reveal delay-2">
+    <img src="./assets/services/stack3.jpg" class="reveal delay-3">
+  </div>
+
+  <div class="pill-group center reveal delay-2">
+    <span class="pill dark">PVC wall panels</span>
+    <span class="pill dark">PVC ceilings</span>
+    <span class="pill dark">UPVC doors</span>
+    <span class="pill dark">windows</span>
+  </div>
+
+  <p class="stack-desc reveal delay-3">
+    Ideal for residential & high-traffic areas.
+    We provide premium interior solutions that combine beauty,
+    strength, and easy maintenance.
+  </p>
+
+</section>
+
+<script>
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const revealObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  revealElements.forEach(el => revealObserver.observe(el));
+</script>
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+
+
+</body>
+</html>
